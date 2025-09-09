@@ -1,5 +1,3 @@
-import AdminLogin from "../assets/Admin_login.png";
-
 export const Bio = {
   name: "Halimunnisa Shaik",
   roles: [
@@ -157,16 +155,16 @@ export const education = [
 
 export const projects = [
   {
-    id: 8,
-    title: "Anti-Fraud Model for Internet Loan",
-    date: "Mar 2024-July2024",
-    description:
-      "Developed a deep neural network for fraud detection in internet loans using Lending Club data, enhancing loan application security. The model achieved 91.52% accuracy in detecting fraudulent applications while maintaining 8.48% accuracy for legitimate loans, outperforming traditional methods and demonstrating expertise in applying deep learning to real-world financial security challenges.",
-     image: AdminLogin,
-    tags: ["Python", "Django", "ORM", "javscript", "Mysql"],
-    category: "Deep learning",
-    github: "https://github.com/Halimunnisa0127/Internet-Loan-Fraud-Detection"
-  },
+  id: 8,
+  title: "Anti-Fraud Model for Internet Loan",
+  date: "Mar 2024-July2024",
+  description:
+    "Developed a deep neural network for fraud detection in internet loans using Lending Club data, enhancing loan application security. The model achieved 91.52% accuracy in detecting fraudulent applications while maintaining 8.48% accuracy for legitimate loans, outperforming traditional methods and demonstrating expertise in applying deep learning to real-world financial security challenges.",
+  image: "/Admin_login.png",
+  tags: ["Python", "Django", "ORM", "javscript", "Mysql"],
+  category: "Deep learning",
+  github: "https://github.com/Halimunnisa0127/Internet-Loan-Fraud-Detection"
+}
   {
     id: 9,
     title: "food-delivery-app",
