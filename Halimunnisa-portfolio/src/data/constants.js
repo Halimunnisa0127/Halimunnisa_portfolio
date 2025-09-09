@@ -208,4 +208,3 @@ export const projects = [
     webapp: "https://fashion-ecommerce-app-nine.vercel.app/",
   },
 ];
-
