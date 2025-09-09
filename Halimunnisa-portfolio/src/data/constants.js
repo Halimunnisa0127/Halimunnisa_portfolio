@@ -1,7 +1,11 @@
+import AdminLogin from "../assets/Admin_login.png";
+
+
+
 export const Bio = {
   name: "Halimunnisa Shaik",
   roles: [
-  "Frontend Developer",
+    "Frontend Developer",
   ],
   description:
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
@@ -160,8 +164,7 @@ export const projects = [
     date: "Mar 2024-July2024",
     description:
       "Developed a deep neural network for fraud detection in internet loans using Lending Club data, enhancing loan application security. The model achieved 91.52% accuracy in detecting fraudulent applications while maintaining 8.48% accuracy for legitimate loans, outperforming traditional methods and demonstrating expertise in applying deep learning to real-world financial security challenges.",
-    image:
-      "./public/Admin_login.png",
+    image: AdminLogin,
     tags: ["Python", "Django", "ORM", "javscript", "Mysql"],
     category: "Deep learning",
     github: "https://github.com/Halimunnisa0127/Internet-Loan-Fraud-Detection"
