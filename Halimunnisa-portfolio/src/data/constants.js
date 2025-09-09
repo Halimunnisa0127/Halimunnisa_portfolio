@@ -160,7 +160,7 @@ export const projects = [
   date: "Mar 2024-July2024",
   description:
     "Developed a deep neural network for fraud detection in internet loans using Lending Club data, enhancing loan application security. The model achieved 91.52% accuracy in detecting fraudulent applications while maintaining 8.48% accuracy for legitimate loans, outperforming traditional methods and demonstrating expertise in applying deep learning to real-world financial security challenges.",
-  image: "./Admin_login.png",
+  image: "/Admin_login.png",
   tags: ["Python", "Django", "ORM", "javscript", "Mysql"],
   category: "Deep learning",
   github: "https://github.com/Halimunnisa0127/Internet-Loan-Fraud-Detection"
