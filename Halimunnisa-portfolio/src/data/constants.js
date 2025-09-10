@@ -79,10 +79,6 @@ export const skills = [
         image: "https://www.shutterstock.com/shutterstock/photos/2486626399/display_1500/stock-vector-python-programming-language-icon-vector-2486626399.jpg",
       },
       {
-        name: "Express Js",
-        image: "https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png"
-      },
-      {
         name: "MySQL",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
@@ -112,6 +108,10 @@ export const skills = [
         name: "VS Code",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
+      },
+       {
+        name: "Vercel",
+        image: "https://hostwizly.com/vercel-icon.svg"
       },
     ],
   },
