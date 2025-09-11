@@ -3,7 +3,7 @@ import { Link as LinkR } from "react-router-dom";
 import styled, { useTheme } from "styled-components";
 import { Bio } from "../../data/constants";
 import { MenuRounded } from "@mui/icons-material";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin,FaEnvelope  } from "react-icons/fa";
 
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.bg};
