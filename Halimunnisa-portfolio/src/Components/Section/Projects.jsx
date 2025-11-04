@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import styled from "styled-components";
 import { projects } from "../../data/constants";
 import ProjectCard from "../../Components/Card/ProjectCard";
@@ -98,18 +98,34 @@ const CardContainer = styled.div`
 
 const Projects = () => {
   const [toggle, setToggle] = useState("all");
+  const [visibleCount, setVisibleCount] = useState(0);
 
   const filteredProjects =
     toggle === "all"
       ? projects
       : projects.filter((item) => item.category === toggle);
 
+  // Reset visibleCount when toggle changes
+  useEffect(() => {
+    setVisibleCount(0);
+  }, [toggle]);
+
+  // Incrementally reveal cards
+  useEffect(() => {
+    if (visibleCount < filteredProjects.length) {
+      const timer = setTimeout(() => {
+        setVisibleCount(visibleCount + 1);
+      }, 150); // 150ms between cards
+      return () => clearTimeout(timer);
+    }
+  }, [visibleCount, filteredProjects.length]);
+
   return (
     <Container id="Projects">
       <Wrapper>
         <Title>Projects</Title>
         <Desc style={{ marginBottom: "40px" }}>
-        I have worked on a wide range of projects, from web applications to deep learning solutions. Here are some of my projects
+          I have worked on a wide range of projects, from web applications to deep learning solutions. Here are some of my projects
         </Desc>
 
         <ToggleButtonGroup>
@@ -121,18 +137,14 @@ const Projects = () => {
             WEB APP'S
           </ToggleButton>
           <Divider />
-          <Divider />
-          <ToggleButton
-            $active={toggle === "Deep learning"}
-            onClick={() => setToggle("Deep learning")}
-          >
+          <ToggleButton $active={toggle === "Deep learning"} onClick={() => setToggle("Deep learning")}>
             DEEP LEARNING
           </ToggleButton>
         </ToggleButtonGroup>
 
         <CardContainer>
-          {filteredProjects.map((project, index) => (
-            <ProjectCard key={`project-${index}`} project={project} />
+          {filteredProjects.slice(0, visibleCount).map((project, index) => (
+            <ProjectCard key={`project-${index}`} project={{ ...project, index }} />
           ))}
         </CardContainer>
       </Wrapper>

@@ -365,6 +365,7 @@ const ProjectCard = ({ project }) => {
         onMouseLeave={onLeave}
         role="article"
         aria-label={project?.title || "Project card"}
+         style={{ animationDelay: `${project.index * 0.15}s` }} // stagger
       >
         <HeaderRow>
           <Pill>✨ Featured</Pill>

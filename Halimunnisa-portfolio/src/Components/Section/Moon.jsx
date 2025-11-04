@@ -1,4 +1,6 @@
 import React from "react";
+import moonImg from "../../assets/moon-img.png";
+
 
 const Moon = () => {
   return (
@@ -64,7 +66,7 @@ const Moon = () => {
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            background-image: url('https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_1k.jpg');
+            background-image: url(${moonImg});
             background-size: 200% auto;
             background-repeat: repeat-x;
             animation: spin-bg 20s linear infinite, float 6s ease-in-out infinite;
