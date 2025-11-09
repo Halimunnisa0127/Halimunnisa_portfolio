@@ -109,7 +109,7 @@ export const skills = [
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
       },
-       {
+      {
         name: "Vercel",
         image: "https://hostwizly.com/vercel-icon.svg"
       },
@@ -207,4 +207,21 @@ export const projects = [
     github: "https://github.com/Halimunnisa0127/fashion-ecommerce-app/tree/main/fashion-ecommerce-app",
     webapp: "https://fashion-ecommerce-app-nine.vercel.app/",
   },
+  {
+    id: 12,
+    title: "Product-Transparency-Dashboard",
+    date: "Oct 2025 - Oct 2025",
+    description:
+      "A comprehensive product transparency and management system that empowers producers to showcase their commitment to quality and sustainability. The platform combines intuitive design with powerful AI-driven insights.",
+    image:
+      "https://raw.githubusercontent.com/Halimunnisa0127/hedamo-transparency-dashboard/6eb7b18b5e59c7f026f20f272074e28477a294fd/hedamo-transparency/public/Dashboard.png",
+    tags: [
+      "Next Js",
+      "TypeScript",
+      "Tailwind Css",
+    ],
+    category: "web app",
+    github: "https://github.com/Halimunnisa0127/hedamo-transparency-dashboard",
+    webapp: "https://hedamo-transparency-dashboard-hv2v.vercel.app/",
+  }
 ];
