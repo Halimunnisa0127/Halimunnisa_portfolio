@@ -12,7 +12,7 @@ export const Bio = {
   github: "https://github.com/Halimunnisa0127",
 
   resume:
-    "https://drive.google.com/file/d/1MpfzATuzmyeD71iC9-6JOd0nFtDJWVey/view?usp=drivesdk",
+    "https://drive.google.com/file/d/1-0l6Yp8Az7GcEMxZI_X1wnDSJDuILss8/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/halimunnisa-shaik---",
   email: "shaikmunni1314@gmail.com"
 };
