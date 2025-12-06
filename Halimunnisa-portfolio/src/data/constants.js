@@ -223,5 +223,22 @@ export const projects = [
     category: "web app",
     github: "https://github.com/Halimunnisa0127/hedamo-transparency-dashboard",
     webapp: "https://hedamo-transparency-dashboard-hv2v.vercel.app/",
+  },
+   {
+    id: 12,
+    title: "Companies-Directory",
+    date: "Nov 2025",
+    description:
+      "The Companies Directory is a comprehensive platform designed to help users discover, explore, and connect with businesses across various industries.",
+    image:
+      "https://raw.githubusercontent.com/Halimunnisa0127/Companies-Directory/cbd2ab349e056744f2cbf0d255c1bdebc898093c/companies-directory/public/companies-directory.png",
+    tags: [
+      "React Js",
+      "Javascript",
+      "Tailwind Css",
+    ],
+    category: "web app",
+    github: "https://github.com/Halimunnisa0127/Companies-Directory",
+    webapp: "https://companies-directory-gamma.vercel.app/",
   }
 ];
