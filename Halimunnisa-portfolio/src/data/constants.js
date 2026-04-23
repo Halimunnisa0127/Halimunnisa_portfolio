@@ -195,7 +195,7 @@ export const projects = [
     description:
       "This project is an online shopping web application that allows users to search, filter, and browse products, manage a wishlist and cart, and complete purchases. It was created to demonstrate modern frontend development skills with React, Vite, Redux Toolkit, and TailwindCSS, providing a responsive and user-friendly e-commerce experience.",
     image:
-      "https://raw.githubusercontent.com/Halimunnisa0127/fashion-ecommerce-app/77025c70f9b0fc7d6c190ac386a837b504d514d6/fashion-ecommerce-app/public/Images/Home.png",
+      "https://raw.githubusercontent.com/Halimunnisa0127/Halimunnisa_portfolio/main/Halimunnisa-portfolio/public/Home.png",
     tags: [
       "Redux-Toolkit",
       "React Js",
