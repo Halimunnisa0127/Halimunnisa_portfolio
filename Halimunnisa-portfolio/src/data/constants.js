@@ -24,12 +24,12 @@ export const skills = [
       {
         name: "React Js",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png?20220125121207",
+          "https://legacy.reactjs.org/logo-og.png",
       },
       {
         name: "Vite",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/410px-Vitejs-logo.svg.png?20220412224743"
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Vite_Logo_2026.svg/250px-Vite_Logo_2026.svg.png"
       },
       {
         name: "Redux-Toolkit",
@@ -43,12 +43,12 @@ export const skills = [
       {
         name: "CSS3",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
+          "https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg",
       },
       {
         name: "JavaScript",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+          "https://img.favpng.com/10/16/19/javascript-portable-network-graphics-logo-clip-art-computer-icons-png-favpng-BzixGHQWZVVw1v6zPUpdt5Bk5.jpg",
       },
       {
         name: "Bootstrap",
@@ -73,6 +73,10 @@ export const skills = [
       {
         name: "Node Js",
         image: "https://nodejs.org/static/images/logo.svg",
+      },
+      {
+        name: "Express Js",
+        image: "https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png",
       },
       {
         name: "Python",
@@ -107,12 +111,36 @@ export const skills = [
       {
         name: "VS Code",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/960px-Visual_Studio_Code_1.35_icon.svg.png?_=20210804221519",
+      },
+      {
+        name: "Postman",
+        image:
+          "https://w7.pngwing.com/pngs/28/245/png-transparent-postman-hd-logo-thumbnail.png",
       },
       {
         name: "Vercel",
         image: "https://hostwizly.com/vercel-icon.svg"
       },
+      {
+        name: "Render",
+        image: "https://pbs.twimg.com/profile_images/2002125723621060608/nxgDW055_400x400.jpg"
+      },
+    ],
+  },
+  {
+    title: "Devops",
+    skills: [
+      {
+        name: "AWS",
+        image:
+          "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/102017/logo_0.png?17TK91b1B6OvV2MFrCLfukw1c8oEaNr6&itok=vsanFiUj",
+      },
+      {
+        name: "Jenkins",
+        image:
+          "https://miro.medium.com/v2/resize:fit:640/format:webp/1*xbczoyccb92qbh8WI0eUSw.png",
+      }
     ],
   },
 ];
