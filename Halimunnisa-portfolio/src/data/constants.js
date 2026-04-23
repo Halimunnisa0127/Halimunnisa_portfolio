@@ -188,7 +188,24 @@ export const projects = [
     github: "https://github.com/Halimunnisa0127/food-delivery-app",
     webapp: "https://food-delivery-app-psi-five.vercel.app/",
   },
+
   {
+    id: 12,
+    title: "Product-Transparency-Dashboard",
+    date: "Oct 2025 - Oct 2025",
+    description:
+      "A comprehensive product transparency and management system that empowers producers to showcase their commitment to quality and sustainability. The platform combines intuitive design with powerful AI-driven insights.",
+    image:
+      "https://raw.githubusercontent.com/Halimunnisa0127/hedamo-transparency-dashboard/6eb7b18b5e59c7f026f20f272074e28477a294fd/hedamo-transparency/public/Dashboard.png",
+    tags: [
+      "Next Js",
+      "TypeScript",
+      "Tailwind Css",
+    ],
+    category: "web app",
+    github: "https://github.com/Halimunnisa0127/hedamo-transparency-dashboard",
+    webapp: "https://hedamo-transparency-dashboard-hv2v.vercel.app/",
+  }, {
     id: 11,
     title: "fashion-ecommerce-app",
     date: "Aug 2025 - Sep 2025",
@@ -209,23 +226,6 @@ export const projects = [
   },
   {
     id: 12,
-    title: "Product-Transparency-Dashboard",
-    date: "Oct 2025 - Oct 2025",
-    description:
-      "A comprehensive product transparency and management system that empowers producers to showcase their commitment to quality and sustainability. The platform combines intuitive design with powerful AI-driven insights.",
-    image:
-      "https://raw.githubusercontent.com/Halimunnisa0127/hedamo-transparency-dashboard/6eb7b18b5e59c7f026f20f272074e28477a294fd/hedamo-transparency/public/Dashboard.png",
-    tags: [
-      "Next Js",
-      "TypeScript",
-      "Tailwind Css",
-    ],
-    category: "web app",
-    github: "https://github.com/Halimunnisa0127/hedamo-transparency-dashboard",
-    webapp: "https://hedamo-transparency-dashboard-hv2v.vercel.app/",
-  },
-   {
-    id: 12,
     title: "Companies-Directory",
     date: "Nov 2025",
     description:
@@ -240,5 +240,72 @@ export const projects = [
     category: "web app",
     github: "https://github.com/Halimunnisa0127/Companies-Directory",
     webapp: "https://companies-directory-gamma.vercel.app/",
-  }
+  },
+  {
+    id: 13,
+    title: "fashion-ecommerce-app",
+    date: "Aug 2025 - Sep 2025",
+    description:
+      "This project is an online shopping web application that allows users to search, filter, and browse products, manage a wishlist and cart, and complete purchases. It was created to demonstrate modern frontend development skills with React, Vite, Redux Toolkit, and TailwindCSS, providing a responsive and user-friendly e-commerce experience.",
+    image:
+      "https://raw.githubusercontent.com/Halimunnisa0127/Halimunnisa_portfolio/main/Halimunnisa-portfolio/public/Home.png",
+    tags: [
+      "Redux-Toolkit",
+      "React Js",
+      "Vite",
+      "JavaScript",
+      "Tailwind Css",
+    ],
+    category: "web app",
+    github: "https://github.com/Halimunnisa0127/fashion-ecommerce-app/tree/main/fashion-ecommerce-app",
+    webapp: "https://fashion-ecommerce-app-nine.vercel.app/",
+  },
+  {
+    id: 14,
+    title: "Mern fashion-ecommerce-app",
+    date: "Mar 2026",
+    description:
+      "",
+    image:
+      "https://raw.githubusercontent.com/Halimunnisa0127/Sustainable-E-Commerce/main/frontend/public/Home.png",
+    tags: [
+      "Redux-Toolkit",
+      "React Js",
+      "Vite",
+      "JavaScript",
+      "Tailwind Css",
+      "Node Js",
+      "Express Js",
+      "MongoDB",
+      "Razorpay",
+    ],
+    category: "web app",
+    github: "https://github.com/Halimunnisa0127/fashion-ecommerce-mern.git",
+    webapp: "https://fashion-ecommerce-mern.vercel.app/",
+  },
+  {
+    id: 15,
+    title: "Sustainable-E-Commerce",
+    date: "Mar 2026",
+    description:
+      "EcoMind AI System is a powerful backend platform that leverages artificial intelligence to automate sustainable commerce operations.this project demonstrates the integration of AI with real business logic to create production-ready solutions.",
+    image:
+      "https://raw.githubusercontent.com/Halimunnisa0127/Sustainable-E-Commerce/main/frontend/public/Home.png",
+    tags: [
+      "Redux-Toolkit",
+      "React Js",
+      "Vite",
+      "JavaScript",
+      "Tailwind Css",
+      "Node Js",
+      "Express Js",
+      "MongoDB",
+      "Llama 3.1"
+    ],
+    category: "web app",
+    github: "https://github.com/Halimunnisa0127/Sustainable-E-Commerce.git",
+    webapp: "https://sustainable-e-commerce.vercel.app/",
+  },
+
+
 ];
