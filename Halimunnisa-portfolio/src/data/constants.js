@@ -205,25 +205,7 @@ export const projects = [
     category: "web app",
     github: "https://github.com/Halimunnisa0127/hedamo-transparency-dashboard",
     webapp: "https://hedamo-transparency-dashboard-hv2v.vercel.app/",
-  }, {
-    id: 11,
-    title: "fashion-ecommerce-app",
-    date: "Aug 2025 - Sep 2025",
-    description:
-      "This project is an online shopping web application that allows users to search, filter, and browse products, manage a wishlist and cart, and complete purchases. It was created to demonstrate modern frontend development skills with React, Vite, Redux Toolkit, and TailwindCSS, providing a responsive and user-friendly e-commerce experience.",
-    image:
-      "https://raw.githubusercontent.com/Halimunnisa0127/Halimunnisa_portfolio/main/Halimunnisa-portfolio/public/Home.png",
-    tags: [
-      "Redux-Toolkit",
-      "React Js",
-      "Vite",
-      "JavaScript",
-      "Tailwind Css",
-    ],
-    category: "web app",
-    github: "https://github.com/Halimunnisa0127/fashion-ecommerce-app/tree/main/fashion-ecommerce-app",
-    webapp: "https://fashion-ecommerce-app-nine.vercel.app/",
-  },
+  }, 
   {
     id: 12,
     title: "Companies-Directory",
@@ -248,7 +230,7 @@ export const projects = [
     description:
       "",
     image:
-      "https://raw.githubusercontent.com/Halimunnisa0127/Sustainable-E-Commerce/main/frontend/public/Home.png",
+      "https://raw.githubusercontent.com/Halimunnisa0127/Halimunnisa_portfolio/main/Halimunnisa-portfolio/public/Home.png",
     tags: [
       "Redux-Toolkit",
       "React Js",
