@@ -5,7 +5,7 @@ import AdminLogin from "../assets/Admin_login.png";
 export const Bio = {
   name: "Halimunnisa Shaik",
   roles: [
-    "MERN Developer",
+    "MERN-Stack Developer",
     "Devops Engineer",
     "Frontend Developer"
   ],
