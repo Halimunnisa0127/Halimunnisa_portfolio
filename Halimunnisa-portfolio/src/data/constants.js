@@ -96,8 +96,47 @@ export const skills = [
       },
     ],
   },
-
-  {
+ {
+  title: "Cloud & DevOps",
+  skills: [
+    {
+      name: "AWS",
+      image:
+        "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/102017/logo_0.png?17TK91b1B6OvV2MFrCLfukw1c8oEaNr6&itok=vsanFiUj",
+    },
+    {
+      name: "Docker",
+      image:
+        "https://www.svgrepo.com/show/331370/docker.svg",
+    },
+    {
+      name: "Jenkins",
+      image:
+        "https://miro.medium.com/v2/resize:fit:640/format:webp/1*xbczoyccb92qbh8WI0eUSw.png",
+    },
+    {
+      name: "GitHub Actions",
+      image:
+        "https://avatars.githubusercontent.com/u/44036562?s=200&v=4",
+    },
+    {
+      name: "Linux",
+      image:
+        "https://cdn-icons-png.flaticon.com/512/518/518713.png",
+    },
+    {
+      name: "Vercel",
+      image:
+        "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png",
+    },
+    {
+      name: "Render",
+      image:
+        "https://avatars.githubusercontent.com/u/42658871?s=280&v=4",
+    },
+  ],
+},
+    {
     title: "Others",
     skills: [
       {
@@ -128,21 +167,6 @@ export const skills = [
         name: "Render",
         image: "https://pbs.twimg.com/profile_images/2002125723621060608/nxgDW055_400x400.jpg"
       },
-    ],
-  },
-  {
-    title: "Devops",
-    skills: [
-      {
-        name: "AWS",
-        image:
-          "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/102017/logo_0.png?17TK91b1B6OvV2MFrCLfukw1c8oEaNr6&itok=vsanFiUj",
-      },
-      {
-        name: "Jenkins",
-        image:
-          "https://miro.medium.com/v2/resize:fit:640/format:webp/1*xbczoyccb92qbh8WI0eUSw.png",
-      }
     ],
   },
 ];
