@@ -158,15 +158,7 @@ export const skills = [
         name: "Postman",
         image:
           "https://w7.pngwing.com/pngs/28/245/png-transparent-postman-hd-logo-thumbnail.png",
-      },
-      {
-        name: "Vercel",
-        image: "https://hostwizly.com/vercel-icon.svg"
-      },
-      {
-        name: "Render",
-        image: "https://pbs.twimg.com/profile_images/2002125723621060608/nxgDW055_400x400.jpg"
-      },
+      }
     ],
   },
 ];
