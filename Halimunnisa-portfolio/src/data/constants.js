@@ -337,7 +337,7 @@ export const projects = [
   "REST API",
   "Google Gemini",
   "@google/genai"
-]
+],
     category: "web app",
     github: "https://github.com/Halimunnisa0127/deployx/tree/main",
     webapp: "https://deployx-dun.vercel.app/",
