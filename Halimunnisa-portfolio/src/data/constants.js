@@ -10,13 +10,12 @@ export const Bio = {
     "Frontend Developer"
   ],
   description:
-    "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
-  github: "https://github.com/Halimunnisa0127",
+    "Full-Stack MERN Developer with 2 years of professional experience building, testing, securing, and deploying production web applications. I specialize in React.js, Node.js, Express.js, and MongoDB, with hands-on experience in REST APIs, authentication, integrations, Redis, Docker, CI/CD, and AI-powered applications. I also built and led DeployX, a GitHub-to-production deployment platform with asynchronous job processing, secure webhooks, Dockerized builds, and AI-assisted diagnostics.",
 
-  resume:
-    "https://drive.google.com/file/d/1MpfzATuzmyeD71iC9-6JOd0nFtDJWVey/view?usp=drivesdk",
-  linkedin: "https://www.linkedin.com/in/halimunnisa-shaik---",
-  email: "shaikmunni1314@gmail.com"
+  resume:"https://drive.google.com/file/d/1rAffydhBtVqxhl80om6ySatW8E2SS08n/view?usp=sharing",
+  linkedin: "https://www.linkedin.com/in/halimunnisa-shaik-dev",
+  Github:"https://github.com/Halimunnisa0127"
+  email: "halimunnisashaik.dev@gmail.com"
 };
 
 export const skills = [
@@ -79,10 +78,6 @@ export const skills = [
       {
         name: "Express Js",
         image: "https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png",
-      },
-      {
-        name: "Python",
-        image: "https://www.shutterstock.com/shutterstock/photos/2486626399/display_1500/stock-vector-python-programming-language-icon-vector-2486626399.jpg",
       },
       {
         name: "MySQL",
@@ -253,7 +248,7 @@ export const projects = [
     webapp: "https://hedamo-transparency-dashboard-hv2v.vercel.app/",
   }, 
   {
-    id: 12,
+    id: 13,
     title: "Companies-Directory",
     date: "Nov 2025",
     description:
@@ -270,7 +265,7 @@ export const projects = [
     webapp: "https://companies-directory-gamma.vercel.app/",
   },
     {
-    id: 13,
+    id: 14,
     title: "Mern fashion-ecommerce-app",
     date: "Mar 2026",
     description:
@@ -293,7 +288,7 @@ export const projects = [
     webapp: "https://fashion-ecommerce-mern.vercel.app/",
   },
   {
-    id: 14,
+    id: 15,
     title: "Sustainable-E-Commerce",
     date: "Mar 2026",
     description:
@@ -315,6 +310,38 @@ export const projects = [
     github: "https://github.com/Halimunnisa0127/Sustainable-E-Commerce.git",
     webapp: "https://sustainable-e-commerce.vercel.app/",
   },
+    {
+    id: 16,
+    title: "DeployX",
+    date: "July 2026",
+    description:
+      "DeployX is a Vercel-inspired MERN deployment platform that automates GitHub-based deployments using Webhooks, BullMQ, Redis, and Docker. It provides isolated builds, live logs, artifact-based serving, custom domains, secure previews, redeployment, instant rollbacks, and an AI-powered debugging assistant using Google Gemini.",
+    image:
+      "https://raw.githubusercontent.com/Halimunnisa0127/deployx/main/frontend/src/assets/images/deployx.png",
+    tags: [
+  "React.js",
+  "Redux Toolkit",
+  "JavaScript",
+  "Tailwind CSS",
+  "Vite",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "Mongoose",
+  "Redis",
+  "BullMQ",
+  "Docker",
+  "Caddy",
+  "GitHub OAuth",
+  "GitHub Webhooks",
+  "REST API",
+  "Google Gemini",
+  "@google/genai"
+]
+    category: "web app",
+    github: "https://github.com/Halimunnisa0127/deployx/tree/main",
+    webapp: "https://deployx-dun.vercel.app/",
+  }
 
 
 ];
