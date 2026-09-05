@@ -24,6 +24,12 @@ const rise = keyframes`
 const CardWrap = styled.div`
   display: flex;
   height: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const Card = styled.article`
@@ -71,6 +77,14 @@ const Card = styled.article`
     pointer-events: none;
   }
 
+  @media (max-width: 600px) {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+    height: auto;
+    min-height: 580px;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     animation: none;
   }
@@ -114,6 +128,11 @@ const Image = styled.div`
     object-fit: cover;
     object-position: top center;
     display: block;
+  }
+
+  @media (max-width: 600px) {
+    height: 190px;
+    min-height: 190px;
   }
 
   &::after {

@@ -12,6 +12,8 @@ const Container = styled.div`
   position: relative;
   z-index: 1;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 `;
 
 const Wrapper = styled.div`
@@ -23,6 +25,7 @@ const Wrapper = styled.div`
   width: 100%;
   max-width: 1350px;
   gap: 12px;
+  box-sizing: border-box;
   @media (max-width: 960px) {
     flex-direction: column;
   }
@@ -94,6 +97,13 @@ const CardContainer = styled.div`
   align-items: stretch;
   gap: 28px;
   flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: 600px) {
+    gap: 20px;
+    padding: 0;
+  }
 `;
 
 const ShowMoreButton = styled.button`
@@ -122,38 +132,36 @@ const ShowMoreButton = styled.button`
 
 const Projects = () => {
   const [toggle, setToggle] = useState("all");
-  const [showAll, setShowAll] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(2);
 
   const filteredProjects =
     toggle === "all"
       ? projects
       : projects.filter((item) => item.category === toggle);
 
-  const displayedProjects = showAll
-    ? filteredProjects
-    : filteredProjects.slice(0, 2);
-
-  // Reset when toggle changes
+  // Reset to initial 2 projects when category changes
   useEffect(() => {
-    setVisibleCount(0);
-    setShowAll(false);
+    setVisibleCount(2);
   }, [toggle]);
 
-  // Reset when showAll toggles
-  useEffect(() => {
-    setVisibleCount(0);
-  }, [showAll]);
+  const isAllShown = visibleCount >= filteredProjects.length;
 
-  // Incrementally reveal cards
-  useEffect(() => {
-    if (visibleCount < displayedProjects.length) {
-      const timer = setTimeout(() => {
-        setVisibleCount((prev) => prev + 1);
-      }, 150);
-      return () => clearTimeout(timer);
+  const handleToggleCount = () => {
+    if (isAllShown) {
+      // Reset back to showing initial 2 projects
+      setVisibleCount(2);
+      // Optional smooth scroll back to projects section top
+      const projectsSection = document.getElementById("Projects");
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Reveal 2 more projects
+      setVisibleCount((prev) => Math.min(prev + 2, filteredProjects.length));
     }
-  }, [visibleCount, displayedProjects.length]);
+  };
+
+  const remaining = Math.max(0, filteredProjects.length - visibleCount);
 
   return (
     <Container id="Projects">
@@ -178,14 +186,14 @@ const Projects = () => {
         </ToggleButtonGroup>
 
         <CardContainer>
-          {displayedProjects.slice(0, visibleCount).map((project, index) => (
+          {filteredProjects.slice(0, visibleCount).map((project, index) => (
             <ProjectCard key={`project-${project.id || index}`} project={{ ...project, index }} />
           ))}
         </CardContainer>
 
         {filteredProjects.length > 2 && (
-          <ShowMoreButton onClick={() => setShowAll(!showAll)}>
-            {showAll ? "Show Less" : `Show More (${filteredProjects.length - 2} More)`}
+          <ShowMoreButton onClick={handleToggleCount}>
+            {isAllShown ? "Show Less" : `Show More (+${Math.min(2, remaining)})`}
           </ShowMoreButton>
         )}
       </Wrapper>
