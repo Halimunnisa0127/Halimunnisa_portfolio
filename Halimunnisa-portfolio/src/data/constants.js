@@ -199,119 +199,9 @@ export const education = [
 ];
 
 export const projects = [
-  {
-    id: 8,
-    title: "Anti-Fraud Model for Internet Loan",
-    date: "Mar 2024-July2024",
-    description:
-      "Developed a deep neural network for fraud detection in internet loans using Lending Club data, enhancing loan application security. The model achieved 91.52% accuracy in detecting fraudulent applications while maintaining 8.48% accuracy for legitimate loans, outperforming traditional methods and demonstrating expertise in applying deep learning to real-world financial security challenges.",
-    image: AdminLogin,
-    tags: ["Python", "Django", "ORM", "javscript", "Mysql"],
-    category: "Deep learning",
-    github: "https://github.com/Halimunnisa0127/Internet-Loan-Fraud-Detection"
-  },
-  {
-    id: 9,
-    title: "food-delivery-app",
-    date: "Jun 2025 - Jul 2025",
-    description:
-      "Food Delivery Web Application is a modern platform built with React, Vite, JavaScript, and Bootstrap, developed as part of my frontend development learning journey to gain hands-on experience. It provides a seamless and responsive food ordering experience, including features like restaurant listings, detailed food item pages, a dynamic shopping cart, and smooth checkout flow, allowing users to easily browse menus, add items to their cart, and place orders through an intuitive interface.",
-    image:
-      "https://raw.githubusercontent.com/Halimunnisa0127/food-delivery-app/c3a48ca5bc1526b81ae263fa12b3bc29fd612ad7/food-delivery-app/images/home.png",
-    tags: [
-      "React",
-      "Vite",
-      "JavaScript",
-      "Bootstrap",
 
-    ],
-    category: "web app",
-    github: "https://github.com/Halimunnisa0127/food-delivery-app",
-    webapp: "https://food-delivery-app-psi-five.vercel.app/",
-  },
-
-  {
-    id: 12,
-    title: "Product-Transparency-Dashboard",
-    date: "Oct 2025 - Oct 2025",
-    description:
-      "A comprehensive product transparency and management system that empowers producers to showcase their commitment to quality and sustainability. The platform combines intuitive design with powerful AI-driven insights.",
-    image:
-      "https://raw.githubusercontent.com/Halimunnisa0127/hedamo-transparency-dashboard/6eb7b18b5e59c7f026f20f272074e28477a294fd/hedamo-transparency/public/Dashboard.png",
-    tags: [
-      "Next Js",
-      "TypeScript",
-      "Tailwind Css",
-    ],
-    category: "web app",
-    github: "https://github.com/Halimunnisa0127/hedamo-transparency-dashboard",
-    webapp: "https://hedamo-transparency-dashboard-hv2v.vercel.app/",
-  }, 
-  {
-    id: 13,
-    title: "Companies-Directory",
-    date: "Nov 2025",
-    description:
-      "The Companies Directory is a comprehensive platform designed to help users discover, explore, and connect with businesses across various industries.",
-    image:
-      "https://raw.githubusercontent.com/Halimunnisa0127/Companies-Directory/cbd2ab349e056744f2cbf0d255c1bdebc898093c/companies-directory/public/companies-directory.png",
-    tags: [
-      "React Js",
-      "Javascript",
-      "Tailwind Css",
-    ],
-    category: "web app",
-    github: "https://github.com/Halimunnisa0127/Companies-Directory",
-    webapp: "https://companies-directory-gamma.vercel.app/",
-  },
-    {
-    id: 14,
-    title: "Mern fashion-ecommerce-app",
-    date: "Mar 2026",
-    description:
-      "A full-stack MERN e-commerce platform designed to provide a secure and scalable online shopping experience. The platform supports user authentication, product browsing, cart and wishlist management, order placement, online payments, and admin operations. It includes role-based access control, secure Razorpay payment verification, protected REST APIs, and a responsive React frontend optimized for performance and maintainability.",
-    image:
-      "https://raw.githubusercontent.com/Halimunnisa0127/Halimunnisa_portfolio/main/Halimunnisa-portfolio/public/Home.png",
-    tags: [
-      "Redux-Toolkit",
-      "React Js",
-      "Vite",
-      "JavaScript",
-      "Tailwind Css",
-      "Node Js",
-      "Express Js",
-      "MongoDB",
-      "Razorpay",
-    ],
-    category: "web app",
-    github: "https://github.com/Halimunnisa0127/fashion-ecommerce-mern.git",
-    webapp: "https://fashion-ecommerce-mern.vercel.app/",
-  },
-  {
-    id: 15,
-    title: "Sustainable-E-Commerce",
-    date: "Mar 2026",
-    description:
-      "EcoMind AI System is a powerful backend platform that leverages artificial intelligence to automate sustainable commerce operations.this project demonstrates the integration of AI with real business logic to create production-ready solutions.",
-    image:
-      "https://raw.githubusercontent.com/Halimunnisa0127/Sustainable-E-Commerce/main/frontend/public/Home.png",
-    tags: [
-      "Redux-Toolkit",
-      "React Js",
-      "Vite",
-      "JavaScript",
-      "Tailwind Css",
-      "Node Js",
-      "Express Js",
-      "MongoDB",
-      "Llama 3.1"
-    ],
-    category: "web app",
-    github: "https://github.com/Halimunnisa0127/Sustainable-E-Commerce.git",
-    webapp: "https://sustainable-e-commerce.vercel.app/",
-  },
-    {
-    id: 16,
+     {
+    id: 1,
     title: "DeployX",
     date: "July 2026",
     description:
@@ -338,7 +228,120 @@ export const projects = [
     category: "web app",
     github: "https://github.com/Halimunnisa0127/deployx/tree/main",
     webapp: "https://deployx-dun.vercel.app/",
-  }
+  },
+
+    {
+    id: 2,
+    title: "Mern fashion-ecommerce-app",
+    date: "Mar 2026",
+    description:
+      "A full-stack MERN e-commerce platform designed to provide a secure and scalable online shopping experience. The platform supports user authentication, product browsing, cart and wishlist management, order placement, online payments, and admin operations. It includes role-based access control, secure Razorpay payment verification, protected REST APIs, and a responsive React frontend optimized for performance and maintainability.",
+    image:
+      "https://raw.githubusercontent.com/Halimunnisa0127/Halimunnisa_portfolio/main/Halimunnisa-portfolio/public/Home.png",
+    tags: [
+      "Redux-Toolkit",
+      "React Js",
+      "Vite",
+      "JavaScript",
+      "Tailwind Css",
+      "Node Js",
+      "Express Js",
+      "MongoDB",
+      "Razorpay",
+    ],
+    category: "web app",
+    github: "https://github.com/Halimunnisa0127/fashion-ecommerce-mern.git",
+    webapp: "https://fashion-ecommerce-mern.vercel.app/",
+  },
+
+  {
+    id: 3,
+    title: "Sustainable-E-Commerce",
+    date: "Mar 2026",
+    description:
+      "EcoMind AI System is a powerful backend platform that leverages artificial intelligence to automate sustainable commerce operations.this project demonstrates the integration of AI with real business logic to create production-ready solutions.",
+    image:
+      "https://raw.githubusercontent.com/Halimunnisa0127/Sustainable-E-Commerce/main/frontend/public/Home.png",
+    tags: [
+      "Redux-Toolkit",
+      "React Js",
+      "Vite",
+      "JavaScript",
+      "Tailwind Css",
+      "Node Js",
+      "Express Js",
+      "MongoDB",
+      "Llama 3.1"
+    ],
+    category: "web app",
+    github: "https://github.com/Halimunnisa0127/Sustainable-E-Commerce.git",
+    webapp: "https://sustainable-e-commerce.vercel.app/",
+  },
+  {
+    id: 4,
+    title: "food-delivery-app",
+    date: "Jun 2025 - Jul 2025",
+    description:
+      "Food Delivery Web Application is a modern platform built with React, Vite, JavaScript, and Bootstrap, developed as part of my frontend development learning journey to gain hands-on experience. It provides a seamless and responsive food ordering experience, including features like restaurant listings, detailed food item pages, a dynamic shopping cart, and smooth checkout flow, allowing users to easily browse menus, add items to their cart, and place orders through an intuitive interface.",
+    image:
+      "https://raw.githubusercontent.com/Halimunnisa0127/food-delivery-app/c3a48ca5bc1526b81ae263fa12b3bc29fd612ad7/food-delivery-app/images/home.png",
+    tags: [
+      "React",
+      "Vite",
+      "JavaScript",
+      "Bootstrap",
+
+    ],
+    category: "web app",
+    github: "https://github.com/Halimunnisa0127/food-delivery-app",
+    webapp: "https://food-delivery-app-psi-five.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "Product-Transparency-Dashboard",
+    date: "Oct 2025 - Oct 2025",
+    description:
+      "A comprehensive product transparency and management system that empowers producers to showcase their commitment to quality and sustainability. The platform combines intuitive design with powerful AI-driven insights.",
+    image:
+      "https://raw.githubusercontent.com/Halimunnisa0127/hedamo-transparency-dashboard/6eb7b18b5e59c7f026f20f272074e28477a294fd/hedamo-transparency/public/Dashboard.png",
+    tags: [
+      "Next Js",
+      "TypeScript",
+      "Tailwind Css",
+    ],
+    category: "web app",
+    github: "https://github.com/Halimunnisa0127/hedamo-transparency-dashboard",
+    webapp: "https://hedamo-transparency-dashboard-hv2v.vercel.app/",
+  }, 
+   {
+    id: 6,
+    title: "Anti-Fraud Model for Internet Loan",
+    date: "Mar 2024-July2024",
+    description:
+      "Developed a deep neural network for fraud detection in internet loans using Lending Club data, enhancing loan application security. The model achieved 91.52% accuracy in detecting fraudulent applications while maintaining 8.48% accuracy for legitimate loans, outperforming traditional methods and demonstrating expertise in applying deep learning to real-world financial security challenges.",
+    image: AdminLogin,
+    tags: ["Python", "Django", "ORM", "javscript", "Mysql"],
+    category: "Deep learning",
+    github: "https://github.com/Halimunnisa0127/Internet-Loan-Fraud-Detection"
+  },
+  {
+    id:7,
+    title: "Companies-Directory",
+    date: "Nov 2025",
+    description:
+      "The Companies Directory is a comprehensive platform designed to help users discover, explore, and connect with businesses across various industries.",
+    image:
+      "https://raw.githubusercontent.com/Halimunnisa0127/Companies-Directory/cbd2ab349e056744f2cbf0d255c1bdebc898093c/companies-directory/public/companies-directory.png",
+    tags: [
+      "React Js",
+      "Javascript",
+      "Tailwind Css",
+    ],
+    category: "web app",
+    github: "https://github.com/Halimunnisa0127/Companies-Directory",
+    webapp: "https://companies-directory-gamma.vercel.app/",
+  },
+
 
 
 ];
