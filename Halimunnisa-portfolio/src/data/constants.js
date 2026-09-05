@@ -231,7 +231,7 @@ export const projects = [
 ],
     category: "web app",
     github: "https://github.com/Halimunnisa0127/deployx/tree/main",
-    webapp: "https://deployx-dun.vercel.app/",
+    webapp: "https://deployx-dun.vercel.app",
   },
 
     {
@@ -255,7 +255,7 @@ export const projects = [
     ],
     category: "web app",
     github: "https://github.com/Halimunnisa0127/fashion-ecommerce-mern.git",
-    webapp: "https://fashion-ecommerce-mern.vercel.app/",
+    webapp: "https://fashion-ecommerce-mern.vercel.app",
   },
 
   {
@@ -279,7 +279,7 @@ export const projects = [
     ],
     category: "web app",
     github: "https://github.com/Halimunnisa0127/Sustainable-E-Commerce.git",
-    webapp: "https://sustainable-e-commerce.vercel.app/",
+    webapp: "https://sustainable-e-commerce.vercel.app",
   },
   {
     id: 4,
@@ -298,7 +298,7 @@ export const projects = [
     ],
     category: "web app",
     github: "https://github.com/Halimunnisa0127/food-delivery-app",
-    webapp: "https://food-delivery-app-psi-five.vercel.app/",
+    webapp: "https://food-delivery-app-psi-five.vercel.app",
   },
   {
     id: 5,
@@ -315,7 +315,7 @@ export const projects = [
     ],
     category: "web app",
     github: "https://github.com/Halimunnisa0127/hedamo-transparency-dashboard",
-    webapp: "https://hedamo-transparency-dashboard-hv2v.vercel.app/",
+    webapp: "https://hedamo-transparency-dashboard-hv2v.vercel.app",
   }, 
    {
     id: 6,
@@ -327,6 +327,27 @@ export const projects = [
     tags: ["Python", "Django", "ORM", "javscript", "Mysql"],
     category: "Deep learning",
     github: "https://github.com/Halimunnisa0127/Internet-Loan-Fraud-Detection"
+  },
+  {
+    id:8,
+    title: "Bridal-makeup",
+    date: "July 2026",
+    description:
+      "Bridal Makeup Template is a high-performance, dark-aesthetic portfolio and booking website tailored specifically for bridal makeup artists, wedding stylists, and luxury salons. It delivers an editorial look-and-feel designed to elevate brand perception, showcase portfolios, and convert visitors into booked consultations.",
+    image:
+      "https://raw.githubusercontent.com/Halimunnisa0127/bridal-makeup-template/main/frontend/src/assets/images/hero-page.png",
+    tags: [
+      "React 19",
+      "Vite 6",
+      "Framer Motion 12 ",
+      "GSAP",
+      "Javascript",
+      "Tailwind Css",
+      "Lucide React (Icons)"
+    ],
+    category: "web app",
+    github: "https://github.com/Halimunnisa0127/bridal-makeup-template",
+    webapp: "https://bridal-makeup-template.vercel.app",
   },
   {
     id:7,
@@ -343,8 +364,9 @@ export const projects = [
     ],
     category: "web app",
     github: "https://github.com/Halimunnisa0127/Companies-Directory",
-    webapp: "https://companies-directory-gamma.vercel.app/",
+    webapp: "https://companies-directory-gamma.vercel.app",
   },
+  
 
 
 
