@@ -42,7 +42,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Body>
-          <SplashCursor />
+          {/* <SplashCursor /> */}
           <StartCanvas />
           <Hero />
           <div
