@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1350px;
   gap: 12px;
   @media (max-width: 960px) {
     flex-direction: column;
@@ -91,13 +91,38 @@ const Divider = styled.div`
 const CardContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   gap: 28px;
   flex-wrap: wrap;
 `;
 
+const ShowMoreButton = styled.button`
+  margin-top: 36px;
+  padding: 12px 30px;
+  background: transparent;
+  color: ${({ theme }) => theme.primary};
+  border: 1.5px solid ${({ theme }) => theme.primary};
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  &:hover {
+    background: ${({ theme }) => theme.primary};
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(133, 76, 230, 0.4);
+  }
+`;
+
 const Projects = () => {
   const [toggle, setToggle] = useState("all");
+  const [showAll, setShowAll] = useState(false);
   const [visibleCount, setVisibleCount] = useState(0);
 
   const filteredProjects =
@@ -105,20 +130,30 @@ const Projects = () => {
       ? projects
       : projects.filter((item) => item.category === toggle);
 
-  // Reset visibleCount when toggle changes
+  const displayedProjects = showAll
+    ? filteredProjects
+    : filteredProjects.slice(0, 2);
+
+  // Reset when toggle changes
   useEffect(() => {
     setVisibleCount(0);
+    setShowAll(false);
   }, [toggle]);
+
+  // Reset when showAll toggles
+  useEffect(() => {
+    setVisibleCount(0);
+  }, [showAll]);
 
   // Incrementally reveal cards
   useEffect(() => {
-    if (visibleCount < filteredProjects.length) {
+    if (visibleCount < displayedProjects.length) {
       const timer = setTimeout(() => {
-        setVisibleCount(visibleCount + 1);
-      }, 150); // 150ms between cards
+        setVisibleCount((prev) => prev + 1);
+      }, 150);
       return () => clearTimeout(timer);
     }
-  }, [visibleCount, filteredProjects.length]);
+  }, [visibleCount, displayedProjects.length]);
 
   return (
     <Container id="Projects">
@@ -143,10 +178,16 @@ const Projects = () => {
         </ToggleButtonGroup>
 
         <CardContainer>
-          {filteredProjects.slice(0, visibleCount).map((project, index) => (
-            <ProjectCard key={`project-${index}`} project={{ ...project, index }} />
+          {displayedProjects.slice(0, visibleCount).map((project, index) => (
+            <ProjectCard key={`project-${project.id || index}`} project={{ ...project, index }} />
           ))}
         </CardContainer>
+
+        {filteredProjects.length > 2 && (
+          <ShowMoreButton onClick={() => setShowAll(!showAll)}>
+            {showAll ? "Show Less" : `Show More (${filteredProjects.length - 2} More)`}
+          </ShowMoreButton>
+        )}
       </Wrapper>
     </Container>
   );

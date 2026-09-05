@@ -21,21 +21,24 @@ const rise = keyframes`
   to { opacity: 1; transform: translateY(0) scale(1); }
 `;
 
-// ====== Card Shell with gradient border + 3D tilt ======
 const CardWrap = styled.div`
   perspective: 1200px;
+  display: flex;
+  height: 100%;
 `;
 
 const Card = styled.article`
   --r: ${tokens.radius}px;
-  width: 360px;
-  height: 520px;
+  width: 500px;
+  max-width: 100%;
+  height: 680px;
   border-radius: var(--r);
   position: relative;
-  padding: 20px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: ${tokens.gap}px;
+  box-sizing: border-box;
   background: radial-gradient(
       120% 120% at 0% 0%,
       rgba(255, 255, 255, 0.14),
@@ -86,6 +89,7 @@ const HeaderRow = styled.div`
   grid-template-columns: 1fr auto;
   align-items: start;
   gap: 10px;
+  flex-shrink: 0;
 `;
 
 const Pill = styled.span`
@@ -105,7 +109,9 @@ const Pill = styled.span`
 const Image = styled.div`
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 260px;
+  min-height: 260px;
+  flex-shrink: 0;
   border-radius: calc(var(--r) - 6px);
   overflow: hidden;
   transform: translateZ(40px);
@@ -114,7 +120,9 @@ const Image = styled.div`
   img {
     width: 100%;
     height: 100%;
- display: block;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
     transition: transform 0.7s ease;
     will-change: transform;
   }
@@ -141,6 +149,21 @@ const Tags = styled.div`
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 2px;
+  height: 72px;
+  min-height: 72px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  align-content: flex-start;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+  }
 `;
 
 const Tag = styled.span`
@@ -164,11 +187,17 @@ const Tag = styled.span`
 `;
 
 const Title = styled.h3`
-  font-size: 22px;
-  line-height: 1.25;
+  font-size: 20px;
+  line-height: 1.3;
   font-weight: 800;
   color: ${({ theme }) => theme?.text_primary || "#e5e7eb"};
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 26px;
+  flex-shrink: 0;
 `;
 
 const Sub = styled.div`
@@ -182,22 +211,35 @@ const Sub = styled.div`
 
 // === Description with toggle ===
 const Description = styled.p`
-  font-size: 14px;
+  font-size: 13.5px;
   line-height: 1.5;
   color: ${({ theme }) => theme?.text_secondary || "#cbd5e1"};
   ${({ expanded }) =>
-    !expanded &&
-    css`
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    `}
+    !expanded
+      ? css`
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          height: 60px;
+        `
+      : css`
+          height: 60px;
+          overflow-y: auto;
+          scrollbar-width: thin;
+          scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+          &::-webkit-scrollbar {
+            width: 4px;
+          }
+          &::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
+          }
+        `}
 `;
 
 const ReadMoreButton = styled.button`
-  margin-top: 6px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   background: none;
   border: none;
@@ -206,6 +248,7 @@ const ReadMoreButton = styled.button`
   padding: 0;
   align-self: flex-start;
   transition: color 0.2s;
+  flex-shrink: 0;
 
   &:hover {
     color: #93c5fd;
@@ -247,6 +290,7 @@ const Footer = styled.div`
   gap: 10px;
   flex-wrap: wrap;
   justify-content: ${({ single }) => (single ? "center" : "space-between")};
+  flex-shrink: 0;
 `;
 
 const Button = styled.a`
