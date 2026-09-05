@@ -10,7 +10,7 @@ import StartCanvas from "./Components/canvas/Stars";
 import Projects from "./Components/Section/Projects";
 import Contact from "./Components/Section/Contact";
 import Footer from "./Components/Section/Footer";
-import SplashCursor from "./Components/SplashCursor";
+// import SplashCursor from "./Components/SplashCursor";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
