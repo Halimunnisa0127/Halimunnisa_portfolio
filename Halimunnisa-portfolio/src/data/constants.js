@@ -53,7 +53,7 @@ export const skills = [
       {
         name: "JavaScript",
         image:
-          "https://img.favpng.com/10/16/19/javascript-portable-network-graphics-logo-clip-art-computer-icons-png-favpng-BzixGHQWZVVw1v6zPUpdt5Bk5.jpg",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
       },
       {
         name: "Bootstrap",
@@ -68,7 +68,7 @@ export const skills = [
       {
         name: "Tailwind Css",
         image:
-          "https://balticanebula.com/content/images/size/w1000/2023/07/plus-tailwind.jpg",
+          "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
       },
     ],
   },
@@ -81,7 +81,7 @@ export const skills = [
       },
       {
         name: "Express Js",
-        image: "https://www.pngfind.com/pngs/m/136-1363736_express-js-icon-png-transparent-png.png",
+        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg",
       },
       {
         name: "MySQL",
@@ -141,7 +141,7 @@ export const skills = [
       {
         name: "Git",
         image:
-          "https://e7.pngegg.com/pngimages/713/558/png-clipart-computer-icons-pro-git-github-logo-text-logo-thumbnail.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
       },
       {
         name: "GitHub",
@@ -156,7 +156,7 @@ export const skills = [
       {
         name: "Postman",
         image:
-          "https://w7.pngwing.com/pngs/28/245/png-transparent-postman-hd-logo-thumbnail.png",
+          "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
       }
     ],
   },

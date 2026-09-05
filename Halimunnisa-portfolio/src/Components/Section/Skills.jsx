@@ -198,6 +198,7 @@ const SkillItem = styled.div`
 const SkillImage = styled.img`
   width: 24px;
   height: 24px;
+  object-fit: contain;
   transition: all 0.3s ease;
   
   ${SkillItem}:hover & {
