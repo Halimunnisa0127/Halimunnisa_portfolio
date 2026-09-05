@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styled, { keyframes } from "styled-components";
 import { skills } from "../../data/constants";
-import Tilt from "react-parallax-tilt";
+
 // Animations
 const fadeIn = keyframes`
   from {
@@ -124,10 +124,7 @@ const SkillCard = styled.div`
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border-radius: 18px;
   padding: 28px 36px;
-  transition: all 0.3s ease;
-  animation: ${fadeIn} 0.8s ease forwards;
-  opacity: 0;
-  transform: translateY(30px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   flex: 1;
   min-width: 300px;
   max-width: 500px;
@@ -230,34 +227,6 @@ const FloatingShape = styled.div`
 `;
 
 const Skills = () => {
-  const skillRefs = useRef([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.style.opacity = 1;
-              entry.target.style.transform = "translateY(0)";
-            }, index * 150);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    skillRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => {
-      skillRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
-      });
-    };
-  }, []);
-
   // Separate skills into frontend and others
   const frontendSkills = skills.filter(skill => skill.title === "Frontend");
   const otherSkills = skills.filter(skill => skill.title !== "Frontend");
@@ -274,15 +243,11 @@ const Skills = () => {
 
         {/* Frontend Skills Row */}
         <SkillsRow>
-          {frontendSkills.map((skill, index) => (
-            <SkillCard
-              key={skill.title}
-              ref={(el) => (skillRefs.current[index] = el)}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
+          {frontendSkills.map((skill) => (
+            <SkillCard key={skill.title}>
               <SkillTitle>{skill.title}</SkillTitle>
               <SkillList>
-                {skill.skills.map((item, idx) => (
+                {skill.skills.map((item) => (
                   <SkillItem key={item.name}>
                     <SkillImage src={item.image} alt={item.name} />
                     {item.name}
@@ -295,15 +260,11 @@ const Skills = () => {
 
         {/* Backend & Other Skills Row */}
         <SkillsRow>
-          {otherSkills.map((skill, index) => (
-            <SkillCard
-              key={skill.title}
-              ref={(el) => (skillRefs.current[frontendSkills.length + index] = el)}
-              style={{ animationDelay: `${(frontendSkills.length + index) * 0.1}s` }}
-            >
+          {otherSkills.map((skill) => (
+            <SkillCard key={skill.title}>
               <SkillTitle>{skill.title}</SkillTitle>
               <SkillList>
-                {skill.skills.map((item, idx) => (
+                {skill.skills.map((item) => (
                   <SkillItem key={item.name}>
                     <SkillImage src={item.image} alt={item.name} />
                     {item.name}

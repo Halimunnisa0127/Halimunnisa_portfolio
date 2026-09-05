@@ -14,8 +14,12 @@ export const Bio = {
 
   resume:"https://drive.google.com/file/d/1rAffydhBtVqxhl80om6ySatW8E2SS08n/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/halimunnisa-shaik-dev",
-  Github:"https://github.com/Halimunnisa0127",
-  email: "halimunnisashaik.dev@gmail.com"
+  github: "https://github.com/Halimunnisa0127",
+  Github: "https://github.com/Halimunnisa0127",
+  email: "halimunnisashaik.dev@gmail.com",
+  facebook: "https://github.com/Halimunnisa0127",
+  twitter: "https://github.com/Halimunnisa0127",
+  insta: "https://github.com/Halimunnisa0127"
 };
 
 export const skills = [

@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from "react";
+import React, { useMemo, useState } from "react";
 import styled, { keyframes, css } from "styled-components";
 
 // ====== Design Tokens (easy theming) ======
@@ -22,7 +22,6 @@ const rise = keyframes`
 `;
 
 const CardWrap = styled.div`
-  perspective: 1200px;
   display: flex;
   height: 100%;
 `;
@@ -50,8 +49,6 @@ const Card = styled.article`
   -webkit-backdrop-filter: blur(${tokens.blur}px) saturate(140%);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28),
     inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-  transform-style: preserve-3d;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
   animation: ${rise} 0.5s ease;
 
   &::before {
@@ -74,12 +71,7 @@ const Card = styled.article`
     pointer-events: none;
   }
 
-  &:hover {
-    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
-  }
-
   @media (prefers-reduced-motion: reduce) {
-    transition: none;
     animation: none;
   }
 `;
@@ -114,7 +106,6 @@ const Image = styled.div`
   flex-shrink: 0;
   border-radius: calc(var(--r) - 6px);
   overflow: hidden;
-  transform: translateZ(40px);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
 
   img {
@@ -123,12 +114,6 @@ const Image = styled.div`
     object-fit: cover;
     object-position: top center;
     display: block;
-    transition: transform 0.7s ease;
-    will-change: transform;
-  }
-
-  &:hover img {
-    transform: scale(1.06);
   }
 
   &::after {
@@ -212,19 +197,19 @@ const Sub = styled.div`
 // === Description with toggle ===
 const Description = styled.p`
   font-size: 13.5px;
-  line-height: 1.5;
+  line-height: 1.55;
   color: ${({ theme }) => theme?.text_secondary || "#cbd5e1"};
   ${({ expanded }) =>
     !expanded
       ? css`
           display: -webkit-box;
-          -webkit-line-clamp: 3;
+          -webkit-line-clamp: 4;
           -webkit-box-orient: vertical;
           overflow: hidden;
-          height: 60px;
+          height: 84px;
         `
       : css`
-          height: 60px;
+          height: 84px;
           overflow-y: auto;
           scrollbar-width: thin;
           scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
@@ -287,7 +272,7 @@ const AvatarStack = styled.div`
 const Footer = styled.div`
   margin-top: auto;
   display: flex;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
   justify-content: ${({ single }) => (single ? "center" : "space-between")};
   flex-shrink: 0;
@@ -300,16 +285,16 @@ const Button = styled.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 14px;
-  border-radius: 12px;
-  padding: 12px 14px;
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 10px;
+  padding: 9px 18px;
   letter-spacing: 0.2px;
   color: white;
   background: linear-gradient(135deg, #6e8efb, #a777e3);
-  box-shadow: 0 10px 20px rgba(110, 142, 251, 0.25);
+  box-shadow: 0 8px 16px rgba(110, 142, 251, 0.25);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 
   &:hover {
@@ -356,8 +341,6 @@ const Skeleton = styled.div`
 
 // ====== Component ======
 const ProjectCard = ({ project }) => {
-  const cardRef = useRef(null);
-  const imgRef = useRef(null);
   const [imgLoaded, setImgLoaded] = useState(false);
   const [expanded, setExpanded] = useState(false);
 
@@ -367,28 +350,6 @@ const ProjectCard = ({ project }) => {
       "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1200&auto=format&fit=crop",
     [project?.image]
   );
-
-  // 3D tilt
-  const onMove = (e) => {
-    const el = cardRef.current;
-    if (!el) return;
-    const rect = el.getBoundingClientRect();
-    const px = (e.clientX - rect.left) / rect.width - 0.5;
-    const py = (e.clientY - rect.top) / rect.height - 0.5;
-    const rotateX = (+py * -10).toFixed(2);
-    const rotateY = (+px * 12).toFixed(2);
-    el.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    if (imgRef.current)
-      imgRef.current.style.transform = `scale(1.06) translate(${px * 8}px, ${py * 8
-        }px)`;
-  };
-  const onLeave = () => {
-    const el = cardRef.current;
-    if (!el) return;
-    el.style.transform = "rotateX(0deg) rotateY(0deg)";
-    if (imgRef.current)
-      imgRef.current.style.transform = "scale(1) translate(0,0)";
-  };
 
   const iconFor = (t) => {
     const s = String(t).toLowerCase();
@@ -404,12 +365,9 @@ const ProjectCard = ({ project }) => {
   return (
     <CardWrap>
       <Card
-        ref={cardRef}
-        onMouseMove={onMove}
-        onMouseLeave={onLeave}
         role="article"
         aria-label={project?.title || "Project card"}
-         style={{ animationDelay: `${project.index * 0.15}s` }} // stagger
+        style={{ animationDelay: `${project.index * 0.15}s` }}
       >
         <HeaderRow>
           <Pill>✨ Featured</Pill>
@@ -424,7 +382,6 @@ const ProjectCard = ({ project }) => {
         <Image>
           {!imgLoaded && <Skeleton aria-hidden />}
           <img
-            ref={imgRef}
             src={fallback}
             alt={project?.title || "Project screenshot"}
             onLoad={() => setImgLoaded(true)}

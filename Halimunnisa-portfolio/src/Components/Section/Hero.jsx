@@ -3,14 +3,12 @@ import styled, { keyframes } from "styled-components";
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
 import HeroBgAnimation from "../HeroBgAnimation";
-import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import {
   headContainerAnimation,
   headContentAnimation,
   headTextAnimation,
 } from "../../utils/motion";
-import StarCanvas from "../canvas/Stars";
 
 // Keyframe animations
 const gradientAnimation = keyframes`
@@ -390,7 +388,6 @@ const Hero = () => {
     <div id="About">
       <HeroContainer>
         <HeroBg>
-          <StarCanvas />
           <HeroBgAnimation />
         </HeroBg>
 
@@ -444,18 +441,6 @@ const Hero = () => {
                 Check Resume
               </ResumeButton>
             </HeroLeftContainer>
-
-            <HeroRightContainer>
-              <Tilt
-                tiltMaxAngleX={10}
-                tiltMaxAngleY={10}
-                perspective={1000}
-                transitionSpeed={1500}
-                scale={1.05}
-                gyroscope={true}
-              >
-              </Tilt>
-            </HeroRightContainer>
           </HeroInnerContainer>
         </motion.div>
 
