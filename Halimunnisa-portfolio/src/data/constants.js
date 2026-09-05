@@ -269,7 +269,7 @@ export const projects = [
     title: "Mern fashion-ecommerce-app",
     date: "Mar 2026",
     description:
-      "",
+      "A full-stack MERN e-commerce platform designed to provide a secure and scalable online shopping experience. The platform supports user authentication, product browsing, cart and wishlist management, order placement, online payments, and admin operations. It includes role-based access control, secure Razorpay payment verification, protected REST APIs, and a responsive React frontend optimized for performance and maintainability.",
     image:
       "https://raw.githubusercontent.com/Halimunnisa0127/Halimunnisa_portfolio/main/Halimunnisa-portfolio/public/Home.png",
     tags: [
